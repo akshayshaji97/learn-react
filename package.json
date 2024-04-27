@@ -1,0 +1,32 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "react learning course",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshayshaji97/learn-react.git"
+  },
+  "keywords": [
+    "react",
+    "mern",
+    "study"
+  ],
+  "author": "Akshay Shaji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshayshaji97/learn-react/issues"
+  },
+  "homepage": "https://github.com/akshayshaji97/learn-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
