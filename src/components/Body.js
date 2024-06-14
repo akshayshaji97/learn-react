@@ -45,6 +45,7 @@ const Body = () => {
             {restInfo?.map((res) => {
               return res.restId === "1" ? (
                 <RestaurantCardEnhanced
+                  resId={res.restId}
                   resName={res.resName}
                   cuisine={res.cuisine}
                   rating={res.rating}
@@ -52,6 +53,7 @@ const Body = () => {
                 />
               ) : (
                 <RestaurantCard
+                  resId={res.restId}
                   resName={res.resName}
                   cuisine={res.cuisine}
                   rating={res.rating}

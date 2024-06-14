@@ -1,25 +1,22 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import useRestaurantMenuCategory from "../utils/useRestaurantMenuCategory";
+import RestaurantCategory from "./RestaurantCategory";
 
 function RestaurantMenu() {
-
-  const { resId } = useParams();console.log("--1--",resId);
-  const restInfo = use
+  const { resId } = useParams();
+  console.log("--1--", resId);
+  const restInfo = useRestaurantMenuCategory(resId);
+  console.log("--restInfo--", restInfo);
   return (
-    <div>
-        <h1>
-            Name Of restaurants
-        </h1>
-        <h2>
-            Menu
-        </h2>
-        <ul>
-            <li>Menu1</li>
-            <li>Menu2</li>
-            <li>Menu3</li>
-        </ul>
+    <div className="text-center m-4 p-4">
+      <h1 className="text-2xl font-bold m-2 p-2">{restInfo?.resName}</h1>
+      <p className="text-lg font-bold">{restInfo?.cuisine}</p>
+      {restInfo?.categories?.map((itm) => {
+        return <RestaurantCategory data={itm} key={itm.type}/>;
+      })}
     </div>
-  )
+  );
 }
 
 export default RestaurantMenu;
